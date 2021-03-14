@@ -30,19 +30,30 @@ def deep_run_ml_app():
     diabetesPedigreeFunction= st.number_input('DiabetesPedigreeFunction 입력', min_value=1)
     age = st.number_input('Age 입력', min_value=1)
 
-    new_model = tensorflow.keras.models.load_model('data/deep check.h5')
+    new_model = tensorflow.keras.models.load_model('data/deep check(new).h5')
 
     new_data = np.array( [ [ pregnancies, glucose, bloodPressure, skinThickness, insulin,bmi, diabetesPedigreeFunction, age  ] ] ) ## 2차원 설정.
 
-    print(new_data)
+    sc_X = joblib.load('data/sc_X.pkl')
+    new_data = sc_X.transform(new_data)
+    
+    
 
     # 예측.
 
     y_pred = new_model.predict(new_data)
     
+    if y_pred==0 :
+        y_pred = '당뇨병이 아닙니다.'
+        
+    elif y_pred == 1:
+        y_pred = '당뇨병입니다.'
+           
+    
+    
     if st.button('결과 확인') :
 
-        st.write(y_pred)
+        st.write('예측결과는 {}'.format(y_pred))
 
 
 
