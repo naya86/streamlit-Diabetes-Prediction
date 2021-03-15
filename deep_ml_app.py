@@ -38,6 +38,7 @@ def deep_run_ml_app():
     new_data = sc_X.transform(new_data)
     
     
+    
 
     # 예측.
 
