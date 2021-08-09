@@ -28,6 +28,7 @@
  
 - 피처스케일링
   - MinMaxScaler 활용, 피처스케일링 ( 0 ~ 1의 값 )
+  - Streamlit 에서 실시간 활용위해 Scaler저장 (sc_X.pkl)
   
 - train, test set 나누기
   - skleran 의 train_test_split로 8:2 비율로 처리 ( train : test )
