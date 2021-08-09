@@ -63,7 +63,8 @@ model = KerasClassifier(build_fn=build_classifier)
   
 
   
-  
+## **_Streamlit에서 사용자가 입력한 수치를 가지고, 저장된 모델 및 스케일러를 불러와 예측_**
+
   
   
   
