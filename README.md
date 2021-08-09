@@ -1,4 +1,4 @@
-# Diabets-prediction      
+# Diabets-Prediction      
 
 
 
