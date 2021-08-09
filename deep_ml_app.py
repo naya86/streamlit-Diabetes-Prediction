@@ -18,7 +18,7 @@ import joblib
 
 
 def deep_run_ml_app():
-    st.subheader('Machine Learning')
+    st.subheader('예측하기')
     st.write('당뇨병을 예측하기 위해선 데이터 입력이 필요합니다.')
     
     pregnancies = st.number_input('Pregnancies 입력', min_value=1)
