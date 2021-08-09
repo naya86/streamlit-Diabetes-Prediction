@@ -25,8 +25,9 @@ def main():
 
     st.title('당뇨병 데이터 및 예측')
     st.subheader('딥러닝을 이용한 당뇨병 예측 앱')
+    st.subheader('데이터를 통해 학습한 모델로, 사용자 입력 데이터를 받아, 당뇨병인지 아닌지를 예측한다.')
 
-    menu = ['Home', 'EDA', 'Machine Learning']
+    menu = ['Home', 'EDA', 'Predict']
 
     choice = st.sidebar.selectbox('Menu', menu)
 
@@ -38,7 +39,7 @@ def main():
 
 
 
-    if choice == 'Machine Learning' :
+    if choice == 'Predict' :
         deep_run_ml_app()
 
 
