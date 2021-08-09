@@ -21,23 +21,23 @@ from deep_ml_app import deep_run_ml_app
 
 def eda_run_app():
     st.write('데이터 정보')
-    st.write(''' Pregnancies : Number of times pregnant 임신횟수
+    st.write(''' Pregnancies : Number of times pregnant (임신횟수)
 
-    Glucose : 공복혈당 Plasma glucose concentration a 2 hours in an oral glucose tolerance test
+    Glucose : Plasma glucose concentration a 2 hours in an oral glucose tolerance test (공복혈당)
 
-    BloodPressure : Diastolic blood pressure (mm Hg)
+    BloodPressure : Diastolic blood pressure (mm Hg) (혈압)
 
-    SkinThickness : Triceps skin fold thickness (mm)
+    SkinThickness : Triceps skin fold thickness (mm) (피부두께)
 
-    Insulin : 2-Hour serum insulin (mu U/ml)
+    Insulin : 2-Hour serum insulin (mu U/ml) (인슐린)
 
-    BMI : Body mass index (weight in kg/(height in m)^2)
+    BMI : Body mass index (weight in kg/(height in m)^2) (체질량지수)
 
-    Diabetes pedigree function
+    Diabetes pedigree function (가족력)
 
     Age (years)
 
-    COutcome : class variable (0 or 1) 268 of 768 are 1, the others are 0''')
+    Outcome : class variable (0 or 1) 268 of 768 are 1, the others are 0''')
     
     df = pd.read_csv('data/diabetes.csv')
     selected_radio = st.radio('원하는 정보 선택', ['DataFrame','통계치', '상관관계분석', '최대값,최소값'])
